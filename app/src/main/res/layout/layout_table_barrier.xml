@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_optimizationLevel="barrier">
+
+    <!-- Sets the Background for the Table Header -->
+    <View
+        android:id="@+id/view_layout_table_header"
+        style="@style/ConstraintTopCenterHorizontalStyle"
+        android:layout_width="@dimen/match_constraint_0dp"
+        android:layout_height="@dimen/match_constraint_0dp"
+        android:background="@drawable/layout_table_header_background"
+        app:layout_constraintBottom_toBottomOf="@+id/barrier_layout_table_header" />
+
+    <!-- Bottom Barrier for the Table Header -->
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_layout_table_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textview_layout_table_col_entity,textview_layout_table_col_insert,textview_layout_table_col_delete" />
+
+    <!-- 'Entity' Column of the Table Header -->
+    <TextView
+        android:id="@+id/textview_layout_table_col_entity"
+        style="@style/LayoutTableBarrierHeaderCellStyle"
+        android:text="@string/layout_table_col_entity_title"
+        app:layout_constraintBottom_toBottomOf="@+id/barrier_layout_table_header"
+        app:layout_constraintEnd_toEndOf="@+id/barrier_layout_table_entity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/barrier_layout_table_entity"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 'Last Record Inserted' Column of the Table Header -->
+    <TextView
+        android:id="@+id/textview_layout_table_col_insert"
+        style="@style/LayoutTableBarrierHeaderCellStyle"
+        android:text="@string/layout_table_col_insert_title"
+        app:layout_constraintEnd_toStartOf="@+id/textview_layout_table_col_delete"
+        app:layout_constraintLeft_toRightOf="@+id/barrier_layout_table_entity"
+        app:layout_constraintRight_toLeftOf="@+id/textview_layout_table_col_delete"
+        app:layout_constraintStart_toEndOf="@+id/barrier_layout_table_entity" />
+
+    <!-- 'Last Record Deleted' Column of the Table Header -->
+    <TextView
+        android:id="@+id/textview_layout_table_col_delete"
+        style="@style/LayoutTableBarrierHeaderCellStyle"
+        android:text="@string/layout_table_col_delete_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textview_layout_table_col_insert"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textview_layout_table_col_insert" />
+
+    <!-- Sets the Background for the 'Entity' Column -->
+    <View
+        android:id="@+id/view_layout_table_entity"
+        android:layout_width="@dimen/match_constraint_0dp"
+        android:layout_height="@dimen/match_constraint_0dp"
+        android:background="@drawable/layout_table_header_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/barrier_layout_table_entity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/barrier_layout_table_entity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_header" />
+
+    <!-- Right End Barrier for the 'Entity' Column cells -->
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_layout_table_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="textview_layout_table_entity_key,textview_layout_table_entity_gow,textview_layout_table_entity_date,textview_layout_table_entity_time,textview_layout_table_entity_datetime" />
+
+    <!-- Row 'Entity' for the database '_id' -->
+    <TextView
+        android:id="@+id/textview_layout_table_entity_key"
+        style="@style/LayoutTableBarrierEntityCellStyle"
+        android:paddingTop="@dimen/layout_table_top_row_padding_top"
+        android:text="@string/layout_table_entity_key_label"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_header" />
+
+    <!-- Bottom Barrier for the Row '_id' -->
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_layout_table_entity_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textview_layout_table_entity_key, textview_layout_table_cell_insert_key, textview_layout_table_cell_delete_key" />
+
+    <!-- Row 'Entity' for the database 'glass_water_count' -->
+    <TextView
+        android:id="@+id/textview_layout_table_entity_gow"
+        style="@style/LayoutTableBarrierEntityCellStyle"
+        android:text="@string/layout_table_entity_gow_label"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_entity_key" />
+
+    <!-- Bottom Barrier for the Row 'glass_water_count' -->
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_layout_table_entity_gow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textview_layout_table_entity_gow, textview_layout_table_cell_insert_gow, textview_layout_table_cell_delete_gow" />
+
+    <!-- Row 'Entity' for the database 'activity_date' -->
+    <TextView
+        android:id="@+id/textview_layout_table_entity_date"
+        style="@style/LayoutTableBarrierEntityCellStyle"
+        android:text="@string/layout_table_entity_date_label"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_entity_gow" />
+
+    <!-- Bottom Barrier for the Row 'activity_date' -->
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_layout_table_entity_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textview_layout_table_entity_date, textview_layout_table_cell_insert_date, textview_layout_table_cell_delete_date" />
+
+    <!-- Row 'Entity' for the database 'activity_time' -->
+    <TextView
+        android:id="@+id/textview_layout_table_entity_time"
+        style="@style/LayoutTableBarrierEntityCellStyle"
+        android:text="@string/layout_table_entity_time_label"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_entity_date" />
+
+    <!-- Bottom Barrier for the Row 'activity_time' -->
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_layout_table_entity_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textview_layout_table_entity_time, textview_layout_table_cell_insert_time, textview_layout_table_cell_delete_time" />
+
+    <!-- Row 'Entity' for the database 'datetimestamp' -->
+    <TextView
+        android:id="@+id/textview_layout_table_entity_datetime"
+        style="@style/LayoutTableBarrierEntityCellStyle"
+        android:paddingBottom="@dimen/layout_table_last_row_padding_bottom"
+        android:text="@string/layout_table_entity_datetime_label"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_entity_time" />
+
+    <!-- Sets the Background for the Row '_id' -->
+    <View
+        android:id="@+id/view_layout_table_row_key"
+        style="@style/LayoutTableBarrierRowStyle.Even"
+        app:layout_constraintBottom_toBottomOf="@+id/barrier_layout_table_entity_key"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_header" />
+
+    <!-- Sets the Background for the Row 'glass_water_count' -->
+    <View
+        android:id="@+id/view_layout_table_row_gow"
+        style="@style/LayoutTableBarrierRowStyle.Odd"
+        app:layout_constraintBottom_toBottomOf="@+id/barrier_layout_table_entity_gow"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_entity_key" />
+
+    <!-- Sets the Background for the Row 'activity_date' -->
+    <View
+        android:id="@+id/view_layout_table_row_date"
+        style="@style/LayoutTableBarrierRowStyle.Even"
+        app:layout_constraintBottom_toBottomOf="@+id/barrier_layout_table_entity_date"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_entity_gow" />
+
+    <!-- Sets the Background for the Row 'activity_time' -->
+    <View
+        android:id="@+id/view_layout_table_row_time"
+        style="@style/LayoutTableBarrierRowStyle.Odd"
+        app:layout_constraintBottom_toBottomOf="@+id/barrier_layout_table_entity_time"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_entity_date" />
+
+    <!-- Sets the Background for the Row 'datetimestamp' -->
+    <View
+        android:id="@+id/view_layout_table_row_datetime"
+        style="@style/LayoutTableBarrierRowStyle.Even"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_layout_table_entity_time" />
+
+    <!-- Shows the value of '_id' for the 'Last Record Inserted' -->
+    <TextView
+        android:id="@+id/textview_layout_table_cell_insert_key"
+        style="@style/LayoutTableBarrierCellInsertStyle.Key"
+        tools:text="101" />
+
+    <!-- Shows the value of 'glass_water_count' for the 'Last Record Inserted' -->
+    <TextView
+        android:id="@+id/textview_layout_table_cell_insert_gow"
+        style="@style/LayoutTableBarrierCellInsertStyle.Gow"
+        tools:text="2" />
+
+    <!-- Shows the value of 'activity_date' for the 'Last Record Inserted' -->
+    <TextView
+        android:id="@+id/textview_layout_table_cell_insert_date"
+        style="@style/LayoutTableBarrierCellInsertStyle.Date"
+        tools:text="Jan 02, 2018" />
+
+    <!-- Shows the value of 'activity_time' for the 'Last Record Inserted' -->
+    <TextView
+        android:id="@+id/textview_layout_table_cell_insert_time"
+        style="@style/LayoutTableBarrierCellInsertStyle.Time"
+        tools:text="10:40am IST" />
+
+    <!-- Shows the value of 'datetimestamp' for the 'Last Record Inserted' -->
+    <TextView
+        android:id="@+id/textview_layout_table_cell_insert_datetime"
+        style="@style/LayoutTableBarrierCellInsertStyle.Datetime"
+        tools:text="2018-01-02T10:40:33" />
+
+    <!-- Shows the value of '_id' for the 'Last Record Deleted' -->
+    <TextView
+        android:id="@+id/textview_layout_table_cell_delete_key"
+        style="@style/LayoutTableBarrierCellDeleteStyle.Key"
+        tools:text="100" />
+
+    <!-- Shows the value of 'glass_water_count' for the 'Last Record Deleted' -->
+    <TextView
+        android:id="@+id/textview_layout_table_cell_delete_gow"
+        style="@style/LayoutTableBarrierCellDeleteStyle.Gow"
+        tools:text="1" />
+
+    <!-- Shows the value of 'activity_date' for the 'Last Record Deleted' -->
+    <TextView
+        android:id="@+id/textview_layout_table_cell_delete_date"
+        style="@style/LayoutTableBarrierCellDeleteStyle.Date"
+        tools:text="Jan 02, 2018" />
+
+    <!-- Shows the value of 'activity_time' for the 'Last Record Deleted' -->
+    <TextView
+        android:id="@+id/textview_layout_table_cell_delete_time"
+        style="@style/LayoutTableBarrierCellDeleteStyle.Time"
+        tools:text="10:10am IST" />
+
+    <!-- Shows the value of 'datetimestamp' for the 'Last Record Deleted' -->
+    <TextView
+        android:id="@+id/textview_layout_table_cell_delete_datetime"
+        style="@style/LayoutTableBarrierCellDeleteStyle.Datetime"
+        tools:text="2018-01-02T10:10:00" />
+
+</android.support.constraint.ConstraintLayout>

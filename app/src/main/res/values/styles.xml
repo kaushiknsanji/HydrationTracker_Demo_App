@@ -57,6 +57,8 @@
     <!-- STYLES USED FOR THE TABLE LAYOUT -->
     <!-- ================================ -->
 
+    <!-- For the Table constructed using TableLayout : START -->
+
     <!-- Parent Style used for all the Cells in the Table -->
     <style name="BaseLayoutTableCellStyle">
         <item name="android:layout_width">wrap_content</item>
@@ -127,6 +129,141 @@
     <style name="LayoutTableDeleteColumnStyle.Cell">
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
     </style>
+
+    <!-- For the Table constructed using TableLayout : END -->
+    <!-- For the Table constructed using ConstraintLayout with Barriers : START -->
+
+    <!-- Parent Style used for the cell values in the Table -->
+    <style name="BaseLayoutTableBarrierCellStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constrainedWidth">true</item>
+        <item name="android:padding">@dimen/layout_table_content_padding</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+    </style>
+
+    <!-- Child Style of 'BaseLayoutTableBarrierCellStyle' which is also a Parent Style
+    used for the cells in the 'Last Record Inserted' Column -->
+    <style name="LayoutTableBarrierCellInsertStyle" parent="BaseLayoutTableBarrierCellStyle">
+        <item name="layout_constraintLeft_toLeftOf">@+id/textview_layout_table_col_insert</item>
+        <item name="layout_constraintStart_toStartOf">@+id/textview_layout_table_col_insert</item>
+        <item name="layout_constraintRight_toRightOf">@+id/textview_layout_table_col_insert</item>
+        <item name="layout_constraintEnd_toEndOf">@+id/textview_layout_table_col_insert</item>
+    </style>
+
+    <!-- Child Style of 'BaseLayoutTableBarrierCellStyle' which is also a Parent Style
+    used for the cells in the 'Last Record Deleted' Column -->
+    <style name="LayoutTableBarrierCellDeleteStyle" parent="BaseLayoutTableBarrierCellStyle">
+        <item name="layout_constraintLeft_toLeftOf">@+id/textview_layout_table_col_delete</item>
+        <item name="layout_constraintStart_toStartOf">@+id/textview_layout_table_col_delete</item>
+        <item name="layout_constraintRight_toRightOf">@+id/textview_layout_table_col_delete</item>
+        <item name="layout_constraintEnd_toEndOf">@+id/textview_layout_table_col_delete</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierCellInsertStyle' used for the 'ID' row cell in the
+    'Last Record Inserted' Column -->
+    <style name="LayoutTableBarrierCellInsertStyle.Key">
+        <item name="layout_constraintTop_toBottomOf">@+id/barrier_layout_table_header</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierCellInsertStyle' used for the 'GLASS OF WATER' row cell in the
+    'Last Record Inserted' Column -->
+    <style name="LayoutTableBarrierCellInsertStyle.Gow">
+        <item name="layout_constraintTop_toBottomOf">@+id/barrier_layout_table_entity_key</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierCellInsertStyle' used for the 'DATE' row cell in the
+    'Last Record Inserted' Column -->
+    <style name="LayoutTableBarrierCellInsertStyle.Date">
+        <item name="layout_constraintTop_toBottomOf">@+id/barrier_layout_table_entity_gow</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierCellInsertStyle' used for the 'TIME' row cell in the
+    'Last Record Inserted' Column -->
+    <style name="LayoutTableBarrierCellInsertStyle.Time">
+        <item name="layout_constraintTop_toBottomOf">@+id/barrier_layout_table_entity_date</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierCellInsertStyle' used for the 'TIMESTAMP' row cell in the
+    'Last Record Inserted' Column -->
+    <style name="LayoutTableBarrierCellInsertStyle.Datetime">
+        <item name="layout_constraintTop_toBottomOf">@+id/barrier_layout_table_entity_time</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierCellDeleteStyle' used for the 'ID' row cell in the
+    'Last Record Deleted' Column -->
+    <style name="LayoutTableBarrierCellDeleteStyle.Key">
+        <item name="layout_constraintTop_toBottomOf">@+id/barrier_layout_table_header</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierCellDeleteStyle' used for the 'GLASS OF WATER' row cell in the
+    'Last Record Deleted' Column -->
+    <style name="LayoutTableBarrierCellDeleteStyle.Gow">
+        <item name="layout_constraintTop_toBottomOf">@+id/barrier_layout_table_entity_key</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierCellDeleteStyle' used for the 'DATE' row cell in the
+    'Last Record Deleted' Column -->
+    <style name="LayoutTableBarrierCellDeleteStyle.Date">
+        <item name="layout_constraintTop_toBottomOf">@+id/barrier_layout_table_entity_gow</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierCellDeleteStyle' used for the 'TIME' row cell in the
+    'Last Record Deleted' Column -->
+    <style name="LayoutTableBarrierCellDeleteStyle.Time">
+        <item name="layout_constraintTop_toBottomOf">@+id/barrier_layout_table_entity_date</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierCellDeleteStyle' used for the 'TIMESTAMP' row cell in the
+    'Last Record Deleted' Column -->
+    <style name="LayoutTableBarrierCellDeleteStyle.Datetime">
+        <item name="layout_constraintTop_toBottomOf">@+id/barrier_layout_table_entity_time</item>
+    </style>
+
+    <!-- Style used for the Rows in the Table -->
+    <style name="LayoutTableBarrierRowStyle">
+        <item name="android:layout_width">@dimen/match_constraint_0dp</item>
+        <item name="android:layout_height">@dimen/match_constraint_0dp</item>
+        <item name="layout_constraintLeft_toRightOf">@+id/barrier_layout_table_entity</item>
+        <item name="layout_constraintStart_toEndOf">@+id/barrier_layout_table_entity</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierRowStyle' used for decorating ODD Rows in the Table -->
+    <style name="LayoutTableBarrierRowStyle.Odd">
+        <item name="android:background">@drawable/layout_table_row_odd_background</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableBarrierRowStyle' used for decorating EVEN Rows in the Table -->
+    <style name="LayoutTableBarrierRowStyle.Even">
+        <item name="android:background">@drawable/layout_table_row_even_background</item>
+    </style>
+
+    <!-- Style used for the cells in the Header Row of the Table -->
+    <style name="LayoutTableBarrierHeaderCellStyle">
+        <item name="android:layout_width">@dimen/match_constraint_0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/layout_table_content_padding</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead.Inverse</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <!-- Style used for the cells in the 'Entity' Column of the Table -->
+    <style name="LayoutTableBarrierEntityCellStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">@dimen/layout_table_content_padding</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead.Inverse</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+    </style>
+
+    <!-- For the Table constructed using ConstraintLayout with Barriers : END -->
 
     <!-- ================================ -->
     <!-- STYLES USED IN THE MAIN ACTIVITY -->

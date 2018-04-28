@@ -82,7 +82,7 @@
         <include
             android:id="@+id/include_main_layout_table"
             style="@style/ConstraintCenterHorizontalStyle"
-            layout="@layout/layout_table"
+            layout="@layout/layout_table_barrier"
             android:layout_width="@dimen/match_constraint_0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/include_main_layout_table_margin"

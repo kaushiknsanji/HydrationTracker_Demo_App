@@ -25,7 +25,12 @@
     <!-- ==================== -->
     <!-- FOR THE TABLE LAYOUT -->
     <!-- ==================== -->
+    <!-- For the Table constructed using TableLayout -->
     <dimen name="layout_table_content_padding">8dp</dimen>
+    <!-- For the Table constructed using ConstraintLayout with Barriers : START -->
+    <dimen name="layout_table_top_row_padding_top">12dp</dimen>
+    <dimen name="layout_table_last_row_padding_bottom">12dp</dimen>
+    <!-- For the Table constructed using ConstraintLayout with Barriers : END -->
 
     <!-- ====================== -->
     <!-- FOR THE ABOUT ACTIVITY -->

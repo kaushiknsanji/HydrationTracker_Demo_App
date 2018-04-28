@@ -138,3 +138,8 @@ This can be viewed by going into the Overflow menu item **"About"** of the `Main
 ## Icon credits
 
 Water cup icons used are made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+
+## Branch details
+
+* Branch **udacity** is the default branch used for the submission of this project. This contains the UI Table designed using `TableLayout`.
+* Branch **test-table_barrier** is a test branch which contains the UI Table designed using `ConstraintLayout + Barrier`. This was initially developed but since stability issues and slowness were observed in Android 5 and lower, this was later redesigned with `TableLayout`. This branch also contains the UI Table designed with `TableLayout` for the comparison + study on the lines of performance. 

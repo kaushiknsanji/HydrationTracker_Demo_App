@@ -74,7 +74,7 @@
     <string name="about_content_text_intro">App designed and developed by &lt;b&gt;Kaushik N Sanji&lt;/b&gt; as part of the project coursework done for the &lt;b&gt;Android Basics Nanodegree&lt;/b&gt; course offered by &lt;b&gt;Udacity&lt;/b&gt;.</string>
     <!-- For the brief description text about the App -->
     <string name="about_content_text_desc">
-        App illustrates the use of &lt;b&gt;SQLite database&lt;/b&gt; for tracking the user\'s daily habit of &lt;b&gt;Hydration&lt;/b&gt;. This App only demonstrates the behavior of SQLite database for the CRUD operations executed, in an intuitive manner for better understanding. As such it has a basic UI that exposes details of what happens when any CRUD Operation is executed, and cannot be used as your daily tracker as such.
+        App illustrates the use of &lt;b&gt;SQLite database&lt;/b&gt; for tracking the user\'s daily habit of &lt;b&gt;Hydration&lt;/b&gt;. This App only demonstrates the behavior of SQLite database for the CRUD operations executed, in an intuitive manner for better understanding. As such it has a basic UI that exposes details of what happens when any CRUD Operation is executed, and cannot be used as your daily tracker.
 &lt;br/&gt;&lt;br/&gt;Water cup icons used are made by &lt;a href=&quot;http://www.freepik.com&quot; title=&quot;Freepik&quot;&gt;Freepik&lt;/a&gt; from &lt;a href=&quot;https://www.flaticon.com/&quot; title=&quot;Flaticon&quot;&gt;www.flaticon.com&lt;/a&gt; is licensed by &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0/&quot; title=&quot;Creative Commons BY 3.0&quot; target=&quot;_blank&quot;&gt;CC 3.0 BY&lt;/a&gt;&lt;br/&gt;
     </string>
     <!-- Link to the course -->

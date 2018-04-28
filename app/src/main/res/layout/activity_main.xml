@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.example.kaushiknsanji.hydrationtrackerdemo.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_gradient_background">
+
+        <!-- For the Top Title -->
+        <TextView
+            android:id="@+id/textview_main_water_record_title"
+            style="@style/ConstraintCenterHorizontalStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textview_main_water_record_title_margin_top"
+            android:text="@string/main_water_record_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Shows the count of Glasses of Water Drank -->
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textview_main_water_record_count"
+            android:layout_width="@dimen/match_constraint_0dp"
+            android:layout_height="@dimen/match_constraint_0dp"
+            android:layout_margin="@dimen/textview_main_water_record_count_margin"
+            android:ellipsize="end"
+            android:gravity="center|end"
+            android:maxLines="2"
+            android:textColor="?android:textColorPrimary"
+            app:autoSizeMinTextSize="@dimen/textview_main_water_record_count_min_text_size"
+            app:autoSizeStepGranularity="@dimen/textview_main_water_record_count_text_step_size"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/textview_main_db_record_count"
+            app:layout_constraintEnd_toStartOf="@+id/imageview_main_cup_water"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/imageview_main_cup_water"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_main_water_record_title"
+            tools:text="20" />
+
+        <!-- Shows the Image of Water Cup based on the count -->
+        <ImageView
+            android:id="@+id/imageview_main_cup_water"
+            android:layout_width="@dimen/match_constraint_0dp"
+            android:layout_height="@dimen/match_constraint_0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textview_main_water_record_count"
+            app:layout_constraintDimensionRatio="H,1.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/textview_main_water_record_count"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textview_main_water_record_count"
+            app:layout_constraintTop_toTopOf="@+id/textview_main_water_record_count"
+            tools:srcCompat="@drawable/ic_main_cup_water_empty" />
+
+        <!-- Shows the Total Number of Records in the Database -->
+        <TextView
+            android:id="@+id/textview_main_db_record_count"
+            style="@style/ConstraintCenterHorizontalStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/textview_main_db_record_count_margin_bottom"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_main_horizontal_40p"
+            tools:text="@string/main_db_record_count_text" />
+
+        <!-- Horizontal Guideline placed at 40 percent from the top -->
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_main_horizontal_40p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <!-- For the Table Layout that shows recent records -->
+        <include
+            android:id="@+id/include_main_layout_table"
+            style="@style/ConstraintCenterHorizontalStyle"
+            layout="@layout/layout_table"
+            android:layout_width="@dimen/match_constraint_0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/include_main_layout_table_margin"
+            app:layout_constraintBottom_toTopOf="@+id/edittext_layout_main_cup_water_count"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_main_horizontal_40p" />
+
+        <!-- EditText Wrapper for 'Glass of Water' drank to show the hint as a floating label -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edittext_layout_main_cup_water_count"
+            style="@style/MainWaterCountEditTextInputStyle"
+            android:layout_width="@dimen/match_constraint_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/edittext_main_cup_water_count_margin_top"
+            android:theme="@style/MainWaterCountEditTextThemeStyle"
+            app:layout_constraintBottom_toTopOf="@+id/button_main_insert_action"
+            app:layout_constraintEnd_toEndOf="@+id/include_main_layout_table"
+            app:layout_constraintLeft_toLeftOf="@+id/include_main_layout_table"
+            app:layout_constraintRight_toRightOf="@+id/include_main_layout_table"
+            app:layout_constraintStart_toStartOf="@+id/include_main_layout_table"
+            app:layout_constraintTop_toBottomOf="@+id/include_main_layout_table">
+
+            <!-- EditText that captures the value of 'Glass of Water' drank -->
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edittext_main_cup_water_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="123"
+                android:hint="@string/main_hint_cup_water_count_input"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Button that inserts a new record -->
+        <Button
+            android:id="@+id/button_main_insert_action"
+            style="@style/MainDbButtonStyle"
+            android:layout_marginBottom="@dimen/button_main_insert_action_margin_bottom"
+            android:layout_marginTop="@dimen/button_main_insert_action_margin_top"
+            android:background="@drawable/main_insert_button_selector"
+            android:text="@string/main_insert_button_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_main_delete_action"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button_main_delete_action"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_layout_main_cup_water_count" />
+
+        <!-- Button that deletes a recent record -->
+        <Button
+            android:id="@+id/button_main_delete_action"
+            style="@style/MainDbButtonStyle"
+            android:background="@drawable/main_delete_button_selector"
+            android:text="@string/main_delete_button_label"
+            app:layout_constraintBottom_toBottomOf="@+id/button_main_insert_action"
+            app:layout_constraintEnd_toStartOf="@+id/button_main_clear_action"
+            app:layout_constraintLeft_toRightOf="@+id/button_main_insert_action"
+            app:layout_constraintRight_toLeftOf="@+id/button_main_clear_action"
+            app:layout_constraintStart_toEndOf="@+id/button_main_insert_action"
+            app:layout_constraintTop_toTopOf="@+id/button_main_insert_action" />
+
+        <!-- Button that deletes all the records in the table -->
+        <Button
+            android:id="@+id/button_main_clear_action"
+            style="@style/MainDbButtonStyle"
+            android:background="@drawable/main_clear_button_selector"
+            android:text="@string/main_clear_button_label"
+            app:layout_constraintBottom_toBottomOf="@+id/button_main_delete_action"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/button_main_delete_action"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_main_delete_action"
+            app:layout_constraintTop_toTopOf="@+id/button_main_delete_action" />
+
+        <!-- Group that controls the visibility of DELETE and CLEAR Buttons -->
+        <android.support.constraint.Group
+            android:id="@+id/group_main_delete_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="button_main_delete_action,button_main_clear_action" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

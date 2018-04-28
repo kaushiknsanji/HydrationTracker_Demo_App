@@ -1,0 +1,87 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Name of the App -->
+    <string name="app_name">HydrationTrackerDemo</string>
+
+    <!-- ================================= -->
+    <!-- STRINGS USED IN THE MAIN ACTIVITY -->
+    <!-- ================================= -->
+
+    <!-- For the Title shown in the top -->
+    <string name="main_water_record_title">Total \"Glass of Water\" drank</string>
+
+    <!-- Subtitle that shows the number of records in the Table -->
+    <string name="main_db_record_count_text">
+        <!-- Output will be like 'Total Record(s) found: 10' -->
+        Total Record(s) found: &lt;b&gt;<xliff:g example="10" id="db_record_count">%1$d</xliff:g>&lt;/b&gt;
+    </string>
+
+    <!-- Button Text for 'Insert' Button that inserts a record -->
+    <string name="main_insert_button_label">Insert</string>
+    <!-- Button Text for 'Delete' Button that deletes a recent record -->
+    <string name="main_delete_button_label">Delete</string>
+    <!-- Button Text for 'Clear' Button that deletes all the records in the table -->
+    <string name="main_clear_button_label">Clear</string>
+
+    <!-- Hint message displayed for edit text that captures
+    the input for the count of 'Glass of Water' drank -->
+    <string name="main_hint_cup_water_count_input">How many Glass of Water drank? (1 to 3)</string>
+
+    <!-- Error message displayed underneath the EditText Input when the input value of 'Glass of Water' drank is empty -->
+    <string name="main_error_cup_water_count_input_empty">\'Glass of Water\' input cannot be left empty for INSERT! Valid values are 1 to 3.</string>
+    <!-- Toast displayed when a record is successfully inserted -->
+    <string name="main_msg_success_insert">Record inserted</string>
+    <!-- Toast displayed when a record failed to insert -->
+    <string name="main_msg_failure_insert">Failed to insert a record</string>
+    <!-- Toast displayed when a recent record is successfully deleted -->
+    <string name="main_msg_success_delete">Record deleted</string>
+    <!-- Toast displayed when a recent record failed to delete -->
+    <string name="main_msg_failure_delete">Failed to delete a record</string>
+    <!-- Toast displayed when all records are successfully deleted -->
+    <string name="main_msg_success_delete_all">All records deleted</string>
+    <!-- Toast displayed when all records could not be deleted owing to some failure -->
+    <string name="main_msg_failure_delete_all">Failed to delete all the records in the Table</string>
+
+    <!-- ================================ -->
+    <!-- STRINGS USED IN THE TABLE LAYOUT -->
+    <!-- ================================ -->
+
+    <!-- Column Title for the 'Entity' Column in the Table -->
+    <string name="layout_table_col_entity_title">Entity</string>
+    <!-- Column Title for the 'Last Record Inserted' Column in the Table -->
+    <string name="layout_table_col_insert_title">Last Record Inserted</string>
+    <!-- Column Title for the 'Last Record Deleted' Column in the Table -->
+    <string name="layout_table_col_delete_title">Last Record Deleted</string>
+    <!-- 'Entity' Column cell label for the '_id' column in the database -->
+    <string name="layout_table_entity_key_label">Id</string>
+    <!-- 'Entity' Column cell label for the 'glass_water_count' column in the database -->
+    <string name="layout_table_entity_gow_label">Glass of\nwater</string>
+    <!-- 'Entity' Column cell label for the 'activity_date' column in the database -->
+    <string name="layout_table_entity_date_label">Date</string>
+    <!-- 'Entity' Column cell label for the 'activity_time' column in the database -->
+    <string name="layout_table_entity_time_label">Time</string>
+    <!-- 'Entity' Column cell label for the 'datetimestamp' column in the database -->
+    <string name="layout_table_entity_datetime_label">Timestamp</string>
+
+    <!-- ================================== -->
+    <!-- STRINGS USED IN THE ABOUT ACTIVITY -->
+    <!-- ================================== -->
+
+    <!-- Toolbar title used for the About Activity -->
+    <string name="about_activity_title">About</string>
+    <!-- App Name used as content title -->
+    <string name="about_app_name">Hydration Tracker</string>
+    <!-- For the introductory text about the App -->
+    <string name="about_content_text_intro">App designed and developed by &lt;b&gt;Kaushik N Sanji&lt;/b&gt; as part of the project coursework done for the &lt;b&gt;Android Basics Nanodegree&lt;/b&gt; course offered by &lt;b&gt;Udacity&lt;/b&gt;.</string>
+    <!-- For the brief description text about the App -->
+    <string name="about_content_text_desc">
+        App illustrates the use of &lt;b&gt;SQLite database&lt;/b&gt; for tracking the user\'s daily habit of &lt;b&gt;Hydration&lt;/b&gt;. This App only demonstrates the behavior of SQLite database for the CRUD operations executed, in an intuitive manner for better understanding. As such it has a basic UI that exposes details of what happens when any CRUD Operation is executed, and cannot be used as your daily tracker as such.
+&lt;br/&gt;&lt;br/&gt;Water cup icons used are made by &lt;a href=&quot;http://www.freepik.com&quot; title=&quot;Freepik&quot;&gt;Freepik&lt;/a&gt; from &lt;a href=&quot;https://www.flaticon.com/&quot; title=&quot;Flaticon&quot;&gt;www.flaticon.com&lt;/a&gt; is licensed by &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0/&quot; title=&quot;Creative Commons BY 3.0&quot; target=&quot;_blank&quot;&gt;CC 3.0 BY&lt;/a&gt;&lt;br/&gt;
+    </string>
+    <!-- Link to the course -->
+    <string name="about_udacity_course_link" translatable="false">https://in.udacity.com/course/android-basics-nanodegree-by-google--nd803</string>
+    <!-- Link to the developer's portfolio -->
+    <string name="about_github_profile_link" translatable="false">https://github.com/kaushiknsanji</string>
+    <!-- Link to the developer's bio -->
+    <string name="about_linkedin_profile_link" translatable="false">https://www.linkedin.com/in/kaushiknsanji</string>
+
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MATCH CONSTRAINT Dimension used for ConstraintLayouts -->
+    <dimen name="match_constraint_0dp">0dp</dimen>
+
+    <!-- Dimension used for LinearLayouts -->
+    <dimen name="size_by_weight_0dp">0dp</dimen>
+
+    <!-- ===================== -->
+    <!-- FOR THE MAIN ACTIVITY -->
+    <!-- ===================== -->
+    <dimen name="textview_main_water_record_title_margin_top">16dp</dimen>
+    <dimen name="textview_main_water_record_count_margin">8dp</dimen>
+    <dimen name="textview_main_water_record_count_text_step_size">4sp</dimen>
+    <dimen name="textview_main_water_record_count_min_text_size">24sp</dimen>
+    <dimen name="textview_main_db_record_count_margin_bottom">8dp</dimen>
+    <dimen name="include_main_layout_table_margin">16dp</dimen>
+    <dimen name="button_main_action_margin">8dp</dimen>
+    <dimen name="button_main_insert_action_margin_top">16dp</dimen>
+    <dimen name="button_main_insert_action_margin_bottom">16dp</dimen>
+    <dimen name="edittext_main_cup_water_count_margin_top">16dp</dimen>
+    <dimen name="edittext_main_cup_water_count_floating_hint_text_size">16sp</dimen>
+    <dimen name="edittext_main_cup_water_count_error_text_size">14sp</dimen>
+
+    <!-- ==================== -->
+    <!-- FOR THE TABLE LAYOUT -->
+    <!-- ==================== -->
+    <dimen name="layout_table_content_padding">8dp</dimen>
+
+    <!-- ====================== -->
+    <!-- FOR THE ABOUT ACTIVITY -->
+    <!-- ====================== -->
+    <dimen name="cardview_about_info_corner_radius">8dp</dimen>
+    <dimen name="cardview_about_info_elevation">6dp</dimen>
+    <dimen name="scrollview_about_content_padding">12dp</dimen>
+    <dimen name="cardview_about_internal_content_margin">12dp</dimen>
+    <dimen name="textview_about_content_title_text_size">36sp</dimen>
+    <dimen name="textview_about_content_text_size">18sp</dimen>
+    <dimen name="imageview_about_bio_size">56dp</dimen>
+    <dimen name="toolbar_about_elevation">0dp</dimen>
+
+</resources>

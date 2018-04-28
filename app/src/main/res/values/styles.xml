@@ -1,0 +1,218 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- ================================== -->
+    <!-- STYLES USED FOR CONSTRAINT LAYOUTS -->
+    <!-- ================================== -->
+
+    <!-- Style to align the View component under ConstraintLayout in center_horizontal format -->
+    <style name="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout to the Top in center_horizontal format -->
+    <style name="ConstraintTopCenterHorizontalStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout to the Bottom in center_horizontal format -->
+    <style name="ConstraintBottomCenterHorizontalStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout to the complete Center of its Parent -->
+    <style name="ConstraintCenterInParentStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout in center_vertical format -->
+    <style name="ConstraintCenterVerticalStyle">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout to the Left in center_vertical format -->
+    <style name="ConstraintLeftCenterVerticalStyle" parent="ConstraintCenterVerticalStyle">
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+    </style>
+
+    <!-- Style to align the View component under ConstraintLayout to the Right in center_vertical format -->
+    <style name="ConstraintRightCenterVerticalStyle" parent="ConstraintCenterVerticalStyle">
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <!-- ================================ -->
+    <!-- STYLES USED FOR THE TABLE LAYOUT -->
+    <!-- ================================ -->
+
+    <!-- Parent Style used for all the Cells in the Table -->
+    <style name="BaseLayoutTableCellStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/layout_table_content_padding</item>
+    </style>
+
+    <!-- Child Style of 'BaseLayoutTableCellStyle' which is also a Parent Style
+    used for the 'Entity' Column Cells -->
+    <style name="LayoutTableEntityColumnStyle" parent="BaseLayoutTableCellStyle">
+        <item name="android:layout_column">0</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead.Inverse</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableEntityColumnStyle' used for the
+    Header cell of 'Entity' Column -->
+    <style name="LayoutTableEntityColumnStyle.Header">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableEntityColumnStyle' used for the cells other than the
+    Header cell of 'Entity' Column -->
+    <style name="LayoutTableEntityColumnStyle.Cell">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/layout_table_header_background</item>
+    </style>
+
+    <!-- Child Style of 'BaseLayoutTableCellStyle' which is also a Parent Style
+    used for the 'Last Record Inserted' Column Cells -->
+    <style name="LayoutTableInsertColumnStyle" parent="BaseLayoutTableCellStyle">
+        <item name="android:layout_column">1</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">@dimen/size_by_weight_0dp</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableInsertColumnStyle' used for the
+    Header cell of 'Last Record Inserted' Column -->
+    <style name="LayoutTableInsertColumnStyle.Header">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead.Inverse</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableInsertColumnStyle' used for the cells other than the
+    Header cell of 'Last Record Inserted' Column -->
+    <style name="LayoutTableInsertColumnStyle.Cell">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+    </style>
+
+    <!-- Child Style of 'BaseLayoutTableCellStyle' which is also a Parent Style
+    used for the 'Last Record Deleted' Column Cells -->
+    <style name="LayoutTableDeleteColumnStyle" parent="BaseLayoutTableCellStyle">
+        <item name="android:layout_column">2</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">@dimen/size_by_weight_0dp</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableDeleteColumnStyle' used for the
+    Header cell of 'Last Record Deleted' Column -->
+    <style name="LayoutTableDeleteColumnStyle.Header">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead.Inverse</item>
+    </style>
+
+    <!-- Child Style of 'LayoutTableDeleteColumnStyle' used for the cells other than the
+    Header cell of 'Last Record Deleted' Column -->
+    <style name="LayoutTableDeleteColumnStyle.Cell">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+    </style>
+
+    <!-- ================================ -->
+    <!-- STYLES USED IN THE MAIN ACTIVITY -->
+    <!-- ================================ -->
+
+    <!-- Style used for the Buttons that does database related operations -->
+    <style name="MainDbButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/button_main_action_margin</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">
+            @dimen/button_main_action_margin
+        </item>
+        <item name="android:layout_marginRight">@dimen/button_main_action_margin</item>
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">
+            @dimen/button_main_action_margin
+        </item>
+    </style>
+
+    <!-- Theme Overlay used for the 'TextInputLayout' that captures the 'Glass of Water' input -->
+    <style name="MainWaterCountEditTextThemeStyle" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorControlActivated">
+            @color/mainWaterCountEditTextFloatingHintColorIndigoA700
+        </item>
+        <item name="colorControlHighlight">
+            @color/mainWaterCountEditTextFloatingHintColorIndigoA700
+        </item>
+    </style>
+
+    <!-- Style used for the 'TextInputLayout' that captures the 'Glass of Water' input -->
+    <style name="MainWaterCountEditTextInputStyle">
+        <item name="android:background">@drawable/main_edittext_water_count_background</item>
+        <item name="android:textColorHint">@color/mainBackgroundBottomGradientColor</item>
+        <item name="hintTextAppearance">@style/MainWaterCountEditTextHintAppearanceStyle</item>
+        <item name="errorTextAppearance">@style/MainWaterCountEditTextErrorAppearanceStyle</item>
+    </style>
+
+    <!-- Style used for customizing the Hint Text Appearance of 'TextInputLayout'
+    that captures the 'Glass of Water' input -->
+    <style name="MainWaterCountEditTextHintAppearanceStyle" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">@dimen/edittext_main_cup_water_count_floating_hint_text_size
+        </item>
+        <item name="android:textColor">@color/mainWaterCountEditTextFloatingHintColorIndigoA700
+        </item>
+    </style>
+
+    <!-- Style used for customizing the Error Text Appearance of 'TextInputLayout'
+   that captures the 'Glass of Water' input -->
+    <style name="MainWaterCountEditTextErrorAppearanceStyle" parent="TextAppearance.Design.Error">
+        <item name="android:textSize">@dimen/edittext_main_cup_water_count_error_text_size</item>
+        <item name="android:textColor">@color/mainWaterCountEditTextErrorColorRedA700</item>
+    </style>
+
+    <!-- ============================= -->
+    <!-- STYLES USED IN ABOUT ACTIVITY -->
+    <!-- ============================= -->
+
+    <!-- Custom Theme for the About Activity Only -->
+    <style name="AboutTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Child Style of 'CardView' used for the info content in the About Activity -->
+    <style name="AboutInfoCardStyle" parent="CardView">
+        <item name="cardCornerRadius">@dimen/cardview_about_info_corner_radius</item>
+        <item name="cardBackgroundColor">@color/aboutInfoCardBackgroundColorAmber75</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardElevation">@dimen/cardview_about_info_elevation</item>
+    </style>
+
+    <!-- Style for the Clickable ImageViews shown in the About Activity -->
+    <style name="AboutClickableImageViewStyle">
+        <item name="android:layout_width">@dimen/imageview_about_bio_size</item>
+        <item name="android:layout_height">@dimen/imageview_about_bio_size</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Style for the Text content shown in the About Activity -->
+    <style name="AboutContentTextStyle">
+        <item name="android:layout_width">@dimen/match_constraint_0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/cardview_about_internal_content_margin</item>
+        <item name="android:textSize">@dimen/textview_about_content_text_size</item>
+    </style>
+
+</resources>

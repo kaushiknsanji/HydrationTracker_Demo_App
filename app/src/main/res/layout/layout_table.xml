@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- The Table Header Row -->
+    <TableRow android:background="@drawable/layout_table_header_background">
+
+        <TextView
+            style="@style/LayoutTableEntityColumnStyle.Header"
+            android:text="@string/layout_table_col_entity_title" />
+
+        <TextView
+            style="@style/LayoutTableInsertColumnStyle.Header"
+            android:text="@string/layout_table_col_insert_title" />
+
+        <TextView
+            style="@style/LayoutTableDeleteColumnStyle.Header"
+            android:text="@string/layout_table_col_delete_title" />
+    </TableRow>
+
+    <!-- The Row of the database column '_id' -->
+    <TableRow android:background="@drawable/layout_table_row_even_background">
+
+        <TextView
+            style="@style/LayoutTableEntityColumnStyle.Cell"
+            android:text="@string/layout_table_entity_key_label" />
+
+        <TextView
+            android:id="@+id/textview_layout_table_cell_insert_key"
+            style="@style/LayoutTableInsertColumnStyle.Cell"
+            tools:text="101" />
+
+        <TextView
+            android:id="@+id/textview_layout_table_cell_delete_key"
+            style="@style/LayoutTableDeleteColumnStyle.Cell"
+            tools:text="100" />
+    </TableRow>
+
+    <!-- The Row of the database column 'glass_water_count' -->
+    <TableRow android:background="@drawable/layout_table_row_odd_background">
+
+        <TextView
+            style="@style/LayoutTableEntityColumnStyle.Cell"
+            android:text="@string/layout_table_entity_gow_label" />
+
+        <TextView
+            android:id="@+id/textview_layout_table_cell_insert_gow"
+            style="@style/LayoutTableInsertColumnStyle.Cell"
+            tools:text="2" />
+
+        <TextView
+            android:id="@+id/textview_layout_table_cell_delete_gow"
+            style="@style/LayoutTableDeleteColumnStyle.Cell"
+            tools:text="1" />
+    </TableRow>
+
+    <!-- The Row of the database column 'activity_date' -->
+    <TableRow android:background="@drawable/layout_table_row_even_background">
+
+        <TextView
+            style="@style/LayoutTableEntityColumnStyle.Cell"
+            android:text="@string/layout_table_entity_date_label" />
+
+        <TextView
+            android:id="@+id/textview_layout_table_cell_insert_date"
+            style="@style/LayoutTableInsertColumnStyle.Cell"
+            tools:text="Jan 02, 2018" />
+
+        <TextView
+            android:id="@+id/textview_layout_table_cell_delete_date"
+            style="@style/LayoutTableDeleteColumnStyle.Cell"
+            tools:text="Jan 02, 2018" />
+    </TableRow>
+
+    <!-- The Row of the database column 'activity_time' -->
+    <TableRow android:background="@drawable/layout_table_row_odd_background">
+
+        <TextView
+            style="@style/LayoutTableEntityColumnStyle.Cell"
+            android:text="@string/layout_table_entity_time_label" />
+
+        <TextView
+            android:id="@+id/textview_layout_table_cell_insert_time"
+            style="@style/LayoutTableInsertColumnStyle.Cell"
+            tools:text="10:40am IST" />
+
+        <TextView
+            android:id="@+id/textview_layout_table_cell_delete_time"
+            style="@style/LayoutTableDeleteColumnStyle.Cell"
+            tools:text="10:10am IST" />
+    </TableRow>
+
+    <!-- The Row of the database column 'datetimestamp' -->
+    <TableRow android:background="@drawable/layout_table_row_even_background">
+
+        <TextView
+            style="@style/LayoutTableEntityColumnStyle.Cell"
+            android:text="@string/layout_table_entity_datetime_label" />
+
+        <TextView
+            android:id="@+id/textview_layout_table_cell_insert_datetime"
+            style="@style/LayoutTableInsertColumnStyle.Cell"
+            tools:text="2018-01-02T10:40:33" />
+
+        <TextView
+            android:id="@+id/textview_layout_table_cell_delete_datetime"
+            style="@style/LayoutTableDeleteColumnStyle.Cell"
+            tools:text="2018-01-02T10:10:00" />
+    </TableRow>
+
+</TableLayout>

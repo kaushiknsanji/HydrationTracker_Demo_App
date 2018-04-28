@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ================ -->
+    <!-- APP THEME COLORS -->
+    <!-- ================ -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- ================================ -->
+    <!-- COLORS USED IN THE MAIN ACTIVITY -->
+    <!-- ================================ -->
+    <color name="mainDbRecordCountTextColorRed500">#f44336</color>
+    <color name="mainBackgroundTopGradientColor">#E4E9EB</color>
+    <color name="mainBackgroundBottomGradientColor">#5D7986</color>
+    <color name="mainDbButtonsOuterStrokeColorAmber50">#fff8e1</color>
+    <color name="mainWaterCountEditTextFloatingHintColorIndigoA700">#304ffe</color>
+    <color name="mainWaterCountEditTextErrorColorRedA700">#d50000</color>
+
+    <!-- ================================= -->
+    <!-- COLORS USED IN THE ABOUT ACTIVITY -->
+    <!-- ================================= -->
+    <color name="aboutInfoCardBackgroundColorAmber75">#FFF1C8</color>
+
+</resources>

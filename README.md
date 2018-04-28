@@ -29,7 +29,7 @@ Android device running with Android OS 4.0.4 (API Level 15) or above. Best exper
 ## Design and Implementation of the App
 
 <!-- Video of the App -->
-<!-- [![Video of Complete App Flow](https://i.ytimg.com/vi/XzZbe7aYeXU/maxresdefault.jpg)](https://youtu.be/XzZbe7aYeXU) -->
+[![Video of Complete App Flow](https://i.ytimg.com/vi/x1TKTl9uhRE/maxresdefault.jpg)](https://youtu.be/x1TKTl9uhRE)
 
 App is designed to keep track of the Hydration Habit through a Simple UI. Under the hood, it stores your log /or track records in a `SQLite` database. Following is the structure of the database table used in this App.
 

@@ -155,26 +155,8 @@ public class HydrationDao {
      * @return {@link ContentValues} object containing the values of the latest record.
      */
     public static ContentValues getRecentRecordDetails(@NonNull SQLiteOpenHelper dbHelper) {
-        //Creating/Opening the Database in read mode
-        SQLiteDatabase readableDatabase = dbHelper.getReadableDatabase();
-
-        //Specifying the ORDER BY Clause
-        String orderBy = HydrationEntry._ID + " DESC";
-
-        //Specifying the LIMIT Clause
-        String limit = "1";
-
-        //Firing the query and retrieving the Cursor to the Recent record
-        Cursor cursor = readableDatabase.query(
-                HydrationEntry.TABLE_NAME,      //Table Name
-                null,                   //Selecting all Columns in Projection
-                null,                  //No Where Clause
-                null,               //No Where Clause Values
-                null,                  //No Group By Clause
-                null,                   //No Having Clause
-                orderBy,                       //Order By Clause
-                limit                          //Limit Clause
-        );
+        //Retrieving the Cursor to the latest record
+        Cursor cursor = readRecentRecord(dbHelper);
 
         //Iterating over the cursor to prepare the ContentValues object: START
         ContentValues values = new ContentValues();
@@ -201,6 +183,36 @@ public class HydrationDao {
 
         //Returning the ContentValues prepared for the recent record
         return values;
+    }
+
+    /**
+     * Method that returns a Cursor to the latest record in the table 'hydration'
+     * of the database.
+     *
+     * @param dbHelper instance of {@link HydrationDbHelper}
+     * @return Cursor pointing to the latest record in the table 'hydration'
+     */
+    public static Cursor readRecentRecord(@NonNull SQLiteOpenHelper dbHelper) {
+        //Creating/Opening the Database in read mode
+        SQLiteDatabase readableDatabase = dbHelper.getReadableDatabase();
+
+        //Specifying the ORDER BY Clause
+        String orderBy = HydrationEntry._ID + " DESC";
+
+        //Specifying the LIMIT Clause
+        String limit = "1";
+
+        //Firing the query and returning the Cursor to the Recent record
+        return readableDatabase.query(
+                HydrationEntry.TABLE_NAME,      //Table Name
+                null,                   //Selecting all Columns in Projection
+                null,                  //No Where Clause
+                null,               //No Where Clause Values
+                null,                  //No Group By Clause
+                null,                   //No Having Clause
+                orderBy,                       //Order By Clause
+                limit                          //Limit Clause
+        );
     }
 
     /**

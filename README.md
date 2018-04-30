@@ -138,3 +138,8 @@ This can be viewed by going into the Overflow menu item **"About"** of the `Main
 ## Icon credits
 
 Water cup icons used are made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+
+## Review from the Reviewer (Udacity)
+
+![review](https://user-images.githubusercontent.com/26028981/39418686-64334aaa-4c79-11e8-910f-2d4e5d0b6c92.PNG)
+

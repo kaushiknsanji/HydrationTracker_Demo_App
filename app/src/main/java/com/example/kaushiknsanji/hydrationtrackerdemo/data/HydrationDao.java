@@ -50,8 +50,8 @@ public class HydrationDao {
         //Creating/Opening the Database in write mode
         SQLiteDatabase writableDatabase = dbHelper.getWritableDatabase();
 
-        //Stores the Primary key of the record being inserted. Defaulted to -1.
-        long newRowId = -1;
+        //Stores the Primary key of the record being inserted
+        long newRowId;
 
         //Writing data within a Transaction: START
         writableDatabase.beginTransaction();
@@ -88,7 +88,7 @@ public class HydrationDao {
         String[] selectionArgs = new String[]{String.valueOf(rowKey)};
 
         //Stores the number of records deleted
-        int countOfRecordsDeleted = 0;
+        int countOfRecordsDeleted;
 
         //Deleting the record within a Transaction: START
         writableDatabase.beginTransaction();
@@ -126,7 +126,7 @@ public class HydrationDao {
         String selection = "1";
 
         //Stores the number of records deleted
-        int countOfRecordsDeleted = 0;
+        int countOfRecordsDeleted;
 
         //Deleting the record within a Transaction: START
         writableDatabase.beginTransaction();

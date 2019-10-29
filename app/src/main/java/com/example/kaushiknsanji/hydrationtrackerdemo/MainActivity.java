@@ -213,14 +213,14 @@ public class MainActivity extends AppCompatActivity
 
             //Reloading a record into the 'Last Record Inserted' column from the Bundle if present: START
             ContentValues lastRecordInsertedValues = savedInstanceState.getParcelable(BUNDLE_LAST_INSERT_CV_KEY);
-            if (lastRecordInsertedValues.size() > 0) {
+            if (lastRecordInsertedValues != null && lastRecordInsertedValues.size() > 0) {
                 modifyInsertColumnData(lastRecordInsertedValues);
             }
             //Reloading a record into the 'Last Record Inserted' column from the Bundle if present: END
 
             //Reloading a record into the 'Last Record Deleted' column from the Bundle if present: START
             ContentValues lastRecordDeletedValues = savedInstanceState.getParcelable(BUNDLE_LAST_DELETE_CV_KEY);
-            if (lastRecordDeletedValues.size() > 0) {
+            if (lastRecordDeletedValues != null && lastRecordDeletedValues.size() > 0) {
                 modifyDeleteColumnData(lastRecordDeletedValues);
             }
             //Reloading a record into the 'Last Record Deleted' column from the Bundle if present: END

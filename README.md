@@ -1,5 +1,8 @@
 # HydrationTracker - The Habit Tracking App
 
+![GitHub](https://img.shields.io/github/license/kaushiknsanji/HydrationTracker_Demo_App)  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kaushiknsanji/HydrationTracker_Demo_App)  ![GitHub repo size](https://img.shields.io/github/repo-size/kaushiknsanji/HydrationTracker_Demo_App)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/kaushiknsanji/HydrationTracker_Demo_App)  ![GitHub All Releases](https://img.shields.io/github/downloads/kaushiknsanji/HydrationTracker_Demo_App/total) ![GitHub search hit counter](https://img.shields.io/github/search/kaushiknsanji/HydrationTracker_Demo_App/Habit%20Tracker%20App) ![Minimum API level](https://img.shields.io/badge/API-15+-yellow)
+
 This App has been developed as part of the **Udacity Android Basics Nanodegree Course** for the Exercise Project **"Habit Tracker App"**. The Habit considered here in this project is the daily habit of Hydration. It is recommended to drink 1-2 litres of Water per day for Good Health, but this also depends on how much one expends/dehydrates. So, at least 1 litre of Water per day is a Good Habit and 1 litre amounts to 8 Glasses of Water.
 
 ---
@@ -19,12 +22,16 @@ Android device running with Android OS 4.0.4 (API Level 15) or above. Best exper
 * A method that queries a record from the database and extracts data from the Cursor object returned.
 * No external libraries to be used for the database CRUD calls.
 
+---
+
 ## Things explored/developed in addition to the above defined Rubric
 
 * Although defined in the Rubric that no UI is required, I went ahead and did a simple UI to display only the recent records, to know what is going on in the backend.
 * Explored `Handlers` and `HandlerThreads` to perform database operations in a background thread.
-* Spannables for decorating `TextViews` - [TextAppearanceUtility](/app/src/main/java/com/example/kaushiknsanji/hydrationtrackerdemo/utils/TextAppearanceUtility.java) with html content in text, and for coloring a part of the text.
+* [TextAppearanceUtility](/app/src/main/java/com/example/kaushiknsanji/hydrationtrackerdemo/utils/TextAppearanceUtility.java) for decorating `TextViews` using Spannables, for html content in text, and coloring a part of the text.
 * Explored the use of `TextInputLayout` and `TextInputEditText`.
+
+---
 
 ## Design and Implementation of the App
 
@@ -135,11 +142,48 @@ This can be viewed by going into the Overflow menu item **"About"** of the `Main
 <!-- Image for About page -->
 <img src="https://user-images.githubusercontent.com/26028981/39393171-abba6872-4adf-11e8-8d1d-67d9260840c4.png" width="40%" />  <img src="https://user-images.githubusercontent.com/26028981/39393172-ad2d4a4e-4adf-11e8-98c8-eada3fbb931b.png" width="40%" />
 
+---
+
+## Branches in this Repository
+
+* **[udacity](https://github.com/kaushiknsanji/HydrationTracker_Demo_App/tree/udacity)**
+	* Contains the code submitted for review.
+	* Contains the UI Table designed using `TableLayout`.
+	* Updated Gradle version and applied valid lint corrections.
+	* Added Copyright info.
+* **[test-table_barrier](https://github.com/kaushiknsanji/HydrationTracker_Demo_App/tree/test-table_barrier)
+	* Contains the UI Table designed using `ConstraintLayout + Barrier`.
+	* Initially developed with barriers but owing to stability issues and slowness observed in Android 5 and lower, this was later redesigned with `TableLayout`.
+	* This branch also contains the UI Table designed with `TableLayout` for the comparison + study on the lines of performance.
+
+---
+
 ## Icon credits
 
 Water cup icons used are made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+
+---
 
 ## Review from the Reviewer (Udacity)
 
 ![review](https://user-images.githubusercontent.com/26028981/39418686-64334aaa-4c79-11e8-910f-2d4e5d0b6c92.PNG)
 
+---
+
+## License
+
+```
+Copyright 2018 Kaushik N. Sanji
+
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. 
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+   
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```

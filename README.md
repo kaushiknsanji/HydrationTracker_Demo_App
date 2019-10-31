@@ -151,10 +151,13 @@ This can be viewed by going into the Overflow menu item **"About"** of the `Main
 	* Contains the UI Table designed using `TableLayout`.
 	* Updated Gradle version and applied valid lint corrections.
 	* Added Copyright info.
-* **[test-table_barrier](https://github.com/kaushiknsanji/HydrationTracker_Demo_App/tree/test-table_barrier)
+* **[test-table_barrier](https://github.com/kaushiknsanji/HydrationTracker_Demo_App/tree/test-table_barrier)**
 	* Contains the UI Table designed using `ConstraintLayout + Barrier`.
 	* Initially developed with barriers but owing to stability issues and slowness observed in Android 5 and lower, this was later redesigned with `TableLayout`.
 	* This branch also contains the UI Table designed with `TableLayout` for the comparison + study on the lines of performance.
+* **[release_v1.0](https://github.com/kaushiknsanji/HydrationTracker_Demo_App/tree/release_v1.0)**
+	* Configured an Activity Alias to launch the `MainActivity` - ([commit](https://github.com/kaushiknsanji/HydrationTracker_Demo_App/commit/92eaeec10f94a6602f1c2bde0e1e1b3a8f71cb93)). 
+	* Other minor changes to prepare the app for local release.
 
 ---
 

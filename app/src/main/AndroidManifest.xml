@@ -15,7 +15,8 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kaushiknsanji.hydrationtrackerdemo">
+    package="com.example.kaushiknsanji.hydrationtrackerdemo"
+    android:installLocation="auto">
 
     <application
         android:allowBackup="true"
@@ -24,6 +25,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <!-- For the Main Activity -->
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -31,10 +33,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <!-- For the About Activity -->
         <activity
             android:name=".AboutActivity"
             android:theme="@style/AboutTheme" />
+
+        <!-- Launcher Activity as alias to the Main Activity -->
+        <activity-alias
+            android:name=".LauncherActivity"
+            android:targetActivity=".MainActivity" />
+
     </application>
 
 </manifest>
